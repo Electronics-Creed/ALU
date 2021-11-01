@@ -1,0 +1,108 @@
+Mon Oct 11 10:47:52 UTC 2021 - Executing "openroad -python /openLANE_flow/scripts/extract_metal_layers.py -t /home/rohith/vlsi/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd.tlef -o /openLANE_flow/designs/alu32/runs/run3/tmp/met_layers_list.txt"
+
+Mon Oct 11 10:47:56 UTC 2021 - Executing "/openLANE_flow/scripts/mergeLef.py -i /home/rohith/vlsi/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd.tlef {/home/rohith/vlsi/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef /home/rohith/vlsi/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd__fill_8.lef /home/rohith/vlsi/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd__decap_12.lef /home/rohith/vlsi/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd__fill_12.lef /home/rohith/vlsi/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd__fakediode_2.lef} -o /openLANE_flow/designs/alu32/runs/run3/tmp/merged_unpadded.lef |& tee >&@stdout"
+
+Mon Oct 11 10:47:57 UTC 2021 - Executing "/openLANE_flow/scripts/libtrim.pl /home/rohith/vlsi/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib /openLANE_flow/designs/alu32/runs/run3/tmp/trimmed.lib.exclude.list > /openLANE_flow/designs/alu32/runs/run3/tmp/trimmed.lib"
+
+Mon Oct 11 10:47:58 UTC 2021 - Executing "openroad -python /openLANE_flow/scripts/new_tracks.py -i /home/rohith/vlsi/OpenLane/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tracks.info -o /openLANE_flow/designs/alu32/runs/run3/tmp/config.tracks"
+
+Mon Oct 11 10:48:00 UTC 2021 - Executing "echo {openlane 2021.09.23_03.17.13} > /openLANE_flow/designs/alu32/runs/run3/OPENLANE_VERSION"
+
+Mon Oct 11 10:48:01 UTC 2021 - Executing "sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /home/rohith/vlsi/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib > /openLANE_flow/designs/alu32/runs/run3/tmp/sky130_fd_sc_hd__tt_025C_1v80.no_pg.lib"
+
+Mon Oct 11 10:48:01 UTC 2021 - Executing "yosys -c /openLANE_flow/scripts/synth.tcl -l /openLANE_flow/designs/alu32/runs/run3/logs/synthesis/1-yosys.log |& tee >&@stdout"
+
+Mon Oct 11 10:48:08 UTC 2021 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openLANE_flow\/designs\/alu32\/runs\/run3\/results\/synthesis\/alu32.synthesis.v/} /openLANE_flow/designs/alu32/runs/run3/config.tcl"
+
+Mon Oct 11 10:48:08 UTC 2021 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 0/} /openLANE_flow/designs/alu32/runs/run3/config.tcl"
+
+Mon Oct 11 10:48:08 UTC 2021 - Executing "sed -i /defparam/d /openLANE_flow/designs/alu32/runs/run3/results/synthesis/alu32.synthesis.v"
+
+Mon Oct 11 10:48:08 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/sta.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/synthesis/2-opensta"
+
+Mon Oct 11 10:48:15 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_floorplan.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/floorplan/3-verilog2def.openroad.log"
+
+Mon Oct 11 10:48:19 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_ioplacer.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/floorplan/4-ioPlacer.log"
+
+Mon Oct 11 10:48:23 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_tapcell.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/floorplan/5-tapcell.log"
+
+Mon Oct 11 10:48:27 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_pdn.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/floorplan/7-pdn.log"
+
+Mon Oct 11 10:48:32 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_replace.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/placement/8-replace.log"
+
+Mon Oct 11 10:48:39 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_resizer.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/placement/8-resizer.log"
+
+Mon Oct 11 10:48:44 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_write_verilog.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/9-write_verilog.log"
+
+Mon Oct 11 10:48:46 UTC 2021 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openLANE_flow\/designs\/alu32\/runs\/run3\/results\/synthesis\/alu32.synthesis_optimized.v/} /openLANE_flow/designs/alu32/runs/run3/config.tcl"
+
+Mon Oct 11 10:48:46 UTC 2021 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openLANE_flow\/designs\/alu32\/runs\/run3\/results\/synthesis\/alu32.synthesis.v/} /openLANE_flow/designs/alu32/runs/run3/config.tcl"
+
+Mon Oct 11 10:48:46 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/sta.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/synthesis/10-opensta_post_resizer"
+
+Mon Oct 11 10:48:52 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_opendp.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/placement/11-opendp.log"
+
+Mon Oct 11 10:48:55 UTC 2021 - Executing "openroad -python /openLANE_flow/scripts/write_powered_def.py -d /openLANE_flow/designs/alu32/runs/run3/results/placement/alu32.placement.def -l /openLANE_flow/designs/alu32/runs/run3/tmp/merged.lef --power-port VPWR --ground-port VGND --powered-netlist {} -o /openLANE_flow/designs/alu32/runs/run3/tmp/routing/12-alu32.powered.def |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/lvs/12-write_powered_verilog.log"
+
+Mon Oct 11 10:48:57 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_write_verilog.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/13-write_verilog.log"
+
+Mon Oct 11 10:49:00 UTC 2021 - Executing "/openLANE_flow/scripts/libtrim.pl /home/rohith/vlsi/OpenLane/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib /openLANE_flow/designs/alu32/runs/run3/tmp/cts.lib.exclude.list > /openLANE_flow/designs/alu32/runs/run3/tmp/cts.lib"
+
+Mon Oct 11 10:49:01 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_cts.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/cts/14-cts.log"
+
+Mon Oct 11 10:53:45 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_write_verilog.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/15-write_verilog.log"
+
+Mon Oct 11 10:53:48 UTC 2021 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openLANE_flow\/designs\/alu32\/runs\/run3\/results\/synthesis\/alu32.synthesis_cts.v/} /openLANE_flow/designs/alu32/runs/run3/config.tcl"
+
+Mon Oct 11 10:53:48 UTC 2021 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openLANE_flow\/designs\/alu32\/runs\/run3\/results\/synthesis\/alu32.synthesis_optimized.v/} /openLANE_flow/designs/alu32/runs/run3/config.tcl"
+
+Mon Oct 11 10:53:48 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_resizer_routing_timing.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/placement/15-resizer_timing.log"
+
+Mon Oct 11 10:53:52 UTC 2021 - Executing "openroad -python /openLANE_flow/generate_reports.py -d /openLANE_flow/designs/alu32 --design_name alu32 --tag run3 --output_file /openLANE_flow/designs/alu32/runs/run3/reports/final_summary_report.csv --man_report /openLANE_flow/designs/alu32/runs/run3/reports/manufacturability_report.rpt --runtime_summary /openLANE_flow/designs/alu32/runs/run3/reports/runtime_summary_report.rpt --run_path /openLANE_flow/designs/alu32/runs/run3"
+
+Mon Oct 11 11:02:03 UTC 2021 - Executing "echo {openlane 2021.09.23_03.17.13} > /openLANE_flow/designs/alu32/runs/run3/OPENLANE_VERSION"
+
+Mon Oct 11 11:02:10 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_resizer_routing_timing.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/placement/15-resizer_timing.log"
+
+Mon Oct 11 11:11:22 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_resizer_routing_timing.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/placement/15-resizer_timing.log"
+
+Mon Oct 11 11:16:10 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_resizer_routing_timing.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/placement/15-resizer_timing.log"
+
+Mon Oct 11 11:16:14 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_write_verilog.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/16-write_verilog.log"
+
+Mon Oct 11 11:16:17 UTC 2021 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openLANE_flow\/designs\/alu32\/runs\/run3\/results\/synthesis\/alu32.synthesis_optimized.v/} /openLANE_flow/designs/alu32/runs/run3/config.tcl"
+
+Mon Oct 11 11:16:17 UTC 2021 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openLANE_flow\/designs\/alu32\/runs\/run3\/results\/synthesis\/alu32.synthesis_cts.v/} /openLANE_flow/designs/alu32/runs/run3/config.tcl"
+
+Mon Oct 11 11:16:17 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/sta.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/synthesis/17-opensta_post_resizer_routing_timing"
+
+Mon Oct 11 11:16:23 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_opendp.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/placement/18-opendp.log"
+
+Mon Oct 11 11:16:26 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_groute.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/routing/19-fastroute.log"
+
+Mon Oct 11 11:16:35 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_fill.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/routing/20-addspacers.log"
+
+Mon Oct 11 11:16:38 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_write_verilog.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/21-write_verilog.log"
+
+Mon Oct 11 11:16:42 UTC 2021 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openLANE_flow\/designs\/alu32\/runs\/run3\/results\/synthesis\/alu32.synthesis_preroute.v/} /openLANE_flow/designs/alu32/runs/run3/config.tcl"
+
+Mon Oct 11 11:16:42 UTC 2021 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openLANE_flow\/designs\/alu32\/runs\/run3\/results\/synthesis\/alu32.synthesis_optimized.v/} /openLANE_flow/designs/alu32/runs/run3/config.tcl"
+
+Mon Oct 11 11:16:42 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_droute.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/routing/22-tritonRoute.log"
+
+Mon Oct 11 11:19:57 UTC 2021 - Executing "openroad -python /openLANE_flow/scripts/tr2klayout.py -i /openLANE_flow/designs/alu32/runs/run3/reports/routing/22-tritonRoute.drc -o /openLANE_flow/designs/alu32/runs/run3/reports/routing/22-tritonRoute.klayout.xml --design-name alu32"
+
+Mon Oct 11 11:20:00 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_rcx.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/routing/23-spef_extraction.log"
+
+Mon Oct 11 11:20:04 UTC 2021 - Executing "openroad -exit /openLANE_flow/scripts/sta.tcl |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/synthesis/24-opensta_spef"
+
+Mon Oct 11 11:20:42 UTC 2021 - Executing "magic -noconsole -dnull -rcfile /home/rohith/vlsi/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.magicrc /openLANE_flow/scripts/magic/mag_gds.tcl </dev/null |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/magic/25-magic.log"
+
+Mon Oct 11 11:20:44 UTC 2021 - Executing "magic -noconsole -dnull -rcfile /home/rohith/vlsi/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.magicrc /openLANE_flow/scripts/magic/gds_pointers.tcl </dev/null |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/magic/26-magic.mag.gds_ptrs.log"
+
+Mon Oct 11 11:20:46 UTC 2021 - Executing "sed -i -n {/^<< properties >>/,/^<< end >>/p} /openLANE_flow/designs/alu32/runs/run3/tmp/magic/magic_gds_ptrs.mag"
+
+Mon Oct 11 11:20:46 UTC 2021 - Executing "magic -noconsole -dnull -rcfile /home/rohith/vlsi/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.magicrc /openLANE_flow/scripts/magic/lef.tcl </dev/null |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/magic/27-magic.lef.log"
+
+Mon Oct 11 11:20:48 UTC 2021 - Executing "magic -noconsole -dnull -rcfile /home/rohith/vlsi/OpenLane/pdks/sky130A/libs.tech/magic/sky130A.magicrc /openLANE_flow/scripts/magic/maglef.tcl </dev/null |& tee >&@stdout /openLANE_flow/designs/alu32/runs/run3/logs/magic/28-magic.maglef.log"
+
