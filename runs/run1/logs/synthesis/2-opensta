@@ -1,0 +1,103 @@
+OpenROAD 1 fb8ae93b6c7a5eb0e6fac83360a8a48d76c41885
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0222] Reading LEF file: /openLANE_flow/designs/alu32/runs/run3/tmp/merged_unpadded.lef
+[WARNING ODB-0220] WARNING (LEFPARS-2036): SOURCE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /openLANE_flow/designs/alu32/runs/run3/tmp/merged_unpadded.lef at line 68059.
+
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0225]     Created 441 library cells
+[INFO ODB-0226] Finished LEF file:  /openLANE_flow/designs/alu32/runs/run3/tmp/merged_unpadded.lef
+create_clock [get_ports $::env(CLOCK_PORT)]  -name $::env(CLOCK_PORT)  -period $::env(CLOCK_PERIOD)
+set input_delay_value [expr $::env(CLOCK_PERIOD) * $::env(IO_PCT)]
+set output_delay_value [expr $::env(CLOCK_PERIOD) * $::env(IO_PCT)]
+puts "\[INFO\]: Setting output delay to: $output_delay_value"
+[INFO]: Setting output delay to: 2.0
+puts "\[INFO\]: Setting input delay to: $input_delay_value"
+[INFO]: Setting input delay to: 2.0
+set_max_fanout $::env(SYNTH_MAX_FANOUT) [current_design]
+set clk_indx [lsearch [all_inputs] [get_port $::env(CLOCK_PORT)]]
+#set rst_indx [lsearch [all_inputs] [get_port resetn]]
+set all_inputs_wo_clk [lreplace [all_inputs] $clk_indx $clk_indx]
+#set all_inputs_wo_clk_rst [lreplace $all_inputs_wo_clk $rst_indx $rst_indx]
+set all_inputs_wo_clk_rst $all_inputs_wo_clk
+# correct resetn
+set_input_delay $input_delay_value  -clock [get_clocks $::env(CLOCK_PORT)] $all_inputs_wo_clk_rst
+#set_input_delay 0.0 -clock [get_clocks $::env(CLOCK_PORT)] {resetn}
+set_output_delay $output_delay_value  -clock [get_clocks $::env(CLOCK_PORT)] [all_outputs]
+# TODO set this as parameter
+set_driving_cell -lib_cell $::env(SYNTH_DRIVING_CELL) -pin $::env(SYNTH_DRIVING_CELL_PIN) [all_inputs]
+set cap_load [expr $::env(SYNTH_CAP_LOAD) / 1000.0]
+puts "\[INFO\]: Setting load to: $cap_load"
+[INFO]: Setting load to: 0.01765
+set_load  $cap_load [all_outputs]
+check_report
+No paths found.
+check_report_end
+timing_report
+No paths found.
+timing_report_end
+min_max_report
+No paths found.
+min_max_report_end
+check_slew
+max slew
+
+Pin                                    Limit    Slew   Slack
+------------------------------------------------------------
+_0534_/B1                               1.50    2.30   -0.80 (VIOLATED)
+_0582_/B1                               1.50    2.30   -0.80 (VIOLATED)
+_0593_/B1                               1.50    2.30   -0.80 (VIOLATED)
+_0604_/B1                               1.50    2.30   -0.80 (VIOLATED)
+_0635_/B1                               1.50    2.30   -0.80 (VIOLATED)
+_0648_/B1                               1.50    2.30   -0.80 (VIOLATED)
+_0967_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0968_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0969_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0970_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0971_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0972_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0973_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0974_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0975_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0976_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0977_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0978_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0979_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0980_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0981_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0982_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0983_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0984_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0985_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0986_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0987_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0988_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0989_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0990_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0991_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0992_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0993_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0994_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0995_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0996_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0997_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0998_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0999_/S                                1.50    2.30   -0.80 (VIOLATED)
+_0491_/X                                1.51    2.30   -0.79 (VIOLATED)
+
+max capacitance
+
+Pin                                    Limit     Cap   Slack
+------------------------------------------------------------
+_0491_/X                                0.08    0.13   -0.04 (VIOLATED)
+
+check_slew_end
+wns_report
+wns 0.00
+wns_report_end
+tns_report
+tns 0.00
+tns_report_end

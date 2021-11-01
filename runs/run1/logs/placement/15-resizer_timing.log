@@ -1,0 +1,369 @@
+OpenROAD 1 fb8ae93b6c7a5eb0e6fac83360a8a48d76c41885
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0222] Reading LEF file: /openLANE_flow/designs/alu32/runs/run3/tmp/merged_unpadded.lef
+[WARNING ODB-0220] WARNING (LEFPARS-2036): SOURCE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /openLANE_flow/designs/alu32/runs/run3/tmp/merged_unpadded.lef at line 68059.
+
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0225]     Created 441 library cells
+[INFO ODB-0226] Finished LEF file:  /openLANE_flow/designs/alu32/runs/run3/tmp/merged_unpadded.lef
+[INFO ODB-0127] Reading DEF file: /openLANE_flow/designs/alu32/runs/run3/results/cts/alu32.cts.def
+[INFO ODB-0128] Design: alu32
+[INFO ODB-0130]     Created 134 pins.
+[INFO ODB-0131]     Created 889 components and 5624 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 3284 connections.
+[INFO ODB-0133]     Created 747 nets and 2340 connections.
+[INFO ODB-0134] Finished DEF file: /openLANE_flow/designs/alu32/runs/run3/results/cts/alu32.cts.def
+###############################################################################
+# Created by write_sdc
+# Mon Oct 11 10:53:42 2021
+###############################################################################
+current_design alu32
+###############################################################################
+# Timing Constraints
+###############################################################################
+create_clock -name $::env(CLOCK_PORT) -period $::env(CLOCK_PERIOD)
+set_input_delay 2.0000 -add_delay [get_ports {A[0]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[10]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[11]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[12]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[13]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[14]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[15]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[16]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[17]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[18]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[19]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[1]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[20]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[21]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[22]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[23]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[24]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[25]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[26]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[27]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[28]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[29]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[2]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[30]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[31]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[3]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[4]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[5]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[6]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[7]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[8]}]
+set_input_delay 2.0000 -add_delay [get_ports {A[9]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[0]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[10]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[11]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[12]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[13]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[14]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[15]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[16]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[17]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[18]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[19]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[1]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[20]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[21]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[22]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[23]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[24]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[25]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[26]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[27]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[28]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[29]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[2]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[30]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[31]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[3]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[4]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[5]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[6]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[7]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[8]}]
+set_input_delay 2.0000 -add_delay [get_ports {B[9]}]
+set_input_delay 2.0000 -add_delay [get_ports {Enable}]
+set_input_delay 2.0000 -add_delay [get_ports {opcode[0]}]
+set_input_delay 2.0000 -add_delay [get_ports {opcode[1]}]
+set_input_delay 2.0000 -add_delay [get_ports {opcode[2]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[0]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[10]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[11]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[12]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[13]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[14]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[15]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[16]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[17]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[18]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[19]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[1]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[20]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[21]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[22]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[23]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[24]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[25]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[26]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[27]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[28]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[29]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[2]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[30]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[31]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[32]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[33]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[34]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[35]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[36]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[37]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[38]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[39]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[3]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[40]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[41]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[42]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[43]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[44]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[45]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[46]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[47]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[48]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[49]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[4]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[50]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[51]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[52]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[53]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[54]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[55]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[56]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[57]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[58]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[59]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[5]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[60]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[61]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[62]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[63]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[6]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[7]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[8]}]
+set_output_delay 2.0000 -add_delay [get_ports {Result[9]}]
+###############################################################################
+# Environment
+###############################################################################
+set_load -pin_load 0.0177 [get_ports {Result[63]}]
+set_load -pin_load 0.0177 [get_ports {Result[62]}]
+set_load -pin_load 0.0177 [get_ports {Result[61]}]
+set_load -pin_load 0.0177 [get_ports {Result[60]}]
+set_load -pin_load 0.0177 [get_ports {Result[59]}]
+set_load -pin_load 0.0177 [get_ports {Result[58]}]
+set_load -pin_load 0.0177 [get_ports {Result[57]}]
+set_load -pin_load 0.0177 [get_ports {Result[56]}]
+set_load -pin_load 0.0177 [get_ports {Result[55]}]
+set_load -pin_load 0.0177 [get_ports {Result[54]}]
+set_load -pin_load 0.0177 [get_ports {Result[53]}]
+set_load -pin_load 0.0177 [get_ports {Result[52]}]
+set_load -pin_load 0.0177 [get_ports {Result[51]}]
+set_load -pin_load 0.0177 [get_ports {Result[50]}]
+set_load -pin_load 0.0177 [get_ports {Result[49]}]
+set_load -pin_load 0.0177 [get_ports {Result[48]}]
+set_load -pin_load 0.0177 [get_ports {Result[47]}]
+set_load -pin_load 0.0177 [get_ports {Result[46]}]
+set_load -pin_load 0.0177 [get_ports {Result[45]}]
+set_load -pin_load 0.0177 [get_ports {Result[44]}]
+set_load -pin_load 0.0177 [get_ports {Result[43]}]
+set_load -pin_load 0.0177 [get_ports {Result[42]}]
+set_load -pin_load 0.0177 [get_ports {Result[41]}]
+set_load -pin_load 0.0177 [get_ports {Result[40]}]
+set_load -pin_load 0.0177 [get_ports {Result[39]}]
+set_load -pin_load 0.0177 [get_ports {Result[38]}]
+set_load -pin_load 0.0177 [get_ports {Result[37]}]
+set_load -pin_load 0.0177 [get_ports {Result[36]}]
+set_load -pin_load 0.0177 [get_ports {Result[35]}]
+set_load -pin_load 0.0177 [get_ports {Result[34]}]
+set_load -pin_load 0.0177 [get_ports {Result[33]}]
+set_load -pin_load 0.0177 [get_ports {Result[32]}]
+set_load -pin_load 0.0177 [get_ports {Result[31]}]
+set_load -pin_load 0.0177 [get_ports {Result[30]}]
+set_load -pin_load 0.0177 [get_ports {Result[29]}]
+set_load -pin_load 0.0177 [get_ports {Result[28]}]
+set_load -pin_load 0.0177 [get_ports {Result[27]}]
+set_load -pin_load 0.0177 [get_ports {Result[26]}]
+set_load -pin_load 0.0177 [get_ports {Result[25]}]
+set_load -pin_load 0.0177 [get_ports {Result[24]}]
+set_load -pin_load 0.0177 [get_ports {Result[23]}]
+set_load -pin_load 0.0177 [get_ports {Result[22]}]
+set_load -pin_load 0.0177 [get_ports {Result[21]}]
+set_load -pin_load 0.0177 [get_ports {Result[20]}]
+set_load -pin_load 0.0177 [get_ports {Result[19]}]
+set_load -pin_load 0.0177 [get_ports {Result[18]}]
+set_load -pin_load 0.0177 [get_ports {Result[17]}]
+set_load -pin_load 0.0177 [get_ports {Result[16]}]
+set_load -pin_load 0.0177 [get_ports {Result[15]}]
+set_load -pin_load 0.0177 [get_ports {Result[14]}]
+set_load -pin_load 0.0177 [get_ports {Result[13]}]
+set_load -pin_load 0.0177 [get_ports {Result[12]}]
+set_load -pin_load 0.0177 [get_ports {Result[11]}]
+set_load -pin_load 0.0177 [get_ports {Result[10]}]
+set_load -pin_load 0.0177 [get_ports {Result[9]}]
+set_load -pin_load 0.0177 [get_ports {Result[8]}]
+set_load -pin_load 0.0177 [get_ports {Result[7]}]
+set_load -pin_load 0.0177 [get_ports {Result[6]}]
+set_load -pin_load 0.0177 [get_ports {Result[5]}]
+set_load -pin_load 0.0177 [get_ports {Result[4]}]
+set_load -pin_load 0.0177 [get_ports {Result[3]}]
+set_load -pin_load 0.0177 [get_ports {Result[2]}]
+set_load -pin_load 0.0177 [get_ports {Result[1]}]
+set_load -pin_load 0.0177 [get_ports {Result[0]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {Enable}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[31]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[30]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[29]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[28]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[27]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[26]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[25]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[24]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[23]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[22]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[21]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[20]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[19]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[18]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[17]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[16]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[15]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[14]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[13]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[12]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[11]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[10]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[9]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[8]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[7]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[6]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[5]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[4]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[3]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[2]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[1]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {A[0]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[31]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[30]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[29]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[28]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[27]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[26]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[25]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[24]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[23]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[22]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[21]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[20]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[19]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[18]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[17]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[16]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[15]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[14]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[13]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[12]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[11]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[10]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[9]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[8]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[7]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[6]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[5]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[4]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[3]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[2]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[1]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {B[0]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {opcode[2]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {opcode[1]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_8 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {opcode[0]}]
+###############################################################################
+# Design Rules
+###############################################################################
+set_max_fanout 7.0000 [current_design]
+[INFO GRT-0020] Min routing layer: li1
+[INFO GRT-0021] Max routing layer: met5
+[INFO GRT-0022] Global adjustment: 0%
+[INFO GRT-0023] Grid origin: (0, 0)
+[WARNING GRT-0043] No OR_DEFAULT vias defined.
+[INFO GRT-0224] Chose via L1M1_PR as default.
+[INFO GRT-0224] Chose via M1M2_PR as default.
+[INFO GRT-0224] Chose via M2M3_PR as default.
+[INFO GRT-0224] Chose via M3M4_PR as default.
+[INFO GRT-0224] Chose via M4M5_PR as default.
+[INFO GRT-0088] Layer li1     Track-Pitch = 0.4600  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met1    Track-Pitch = 0.3400  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met2    Track-Pitch = 0.4600  line-2-Via Pitch: 0.3500
+[INFO GRT-0088] Layer met3    Track-Pitch = 0.6800  line-2-Via Pitch: 0.6150
+[INFO GRT-0088] Layer met4    Track-Pitch = 0.9200  line-2-Via Pitch: 1.0400
+[INFO GRT-0088] Layer met5    Track-Pitch = 3.4000  line-2-Via Pitch: 3.1100
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 10222
+[INFO GRT-0019] Found 0 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 40
+[INFO GRT-0017] Processing 15251 blockages on layer li1.
+[INFO GRT-0017] Processing 1831 blockages on layer met1.
+[INFO GRT-0017] Processing 5 blockages on layer met4.
+[INFO GRT-0017] Processing 5 blockages on layer met5.
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+li1        Vertical         4080          3434          15.83%
+met1       Horizontal       5440          4210          22.61%
+met2       Vertical         4080          3888          4.71%
+met3       Horizontal       2720          2670          1.84%
+met4       Vertical         1632          1525          6.56%
+met5       Horizontal        544           510          6.25%
+---------------------------------------------------------------
+
+[INFO GRT-0111] Final number of vias: 1724
+[INFO GRT-0112] Final usage 3D: 8199
+[WARNING GRT-0211] dbGcellGrid already exists in db. Clearing existing dbGCellGrid.
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+li1               3434          1168           34.01%             0 /  0 /  0
+met1              4210          1439           34.18%             0 /  0 /  0
+met2              3888           400           10.29%             0 /  0 /  0
+met3              2670            20            0.75%             0 /  0 /  0
+met4              1525             0            0.00%             0 /  0 /  0
+met5               510             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total            16237          3027           18.64%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 35686 um
+[WARNING RSZ-0021] no estimated parasitics. Using wire load models.
+[INFO RSZ-0033] No hold violations found.
+Placement Analysis
+---------------------------------
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL           19550.4 u
+legalized HPWL          19950.4 u
+delta HPWL                    2 %
+
+[INFO DPL-0020] Mirrored 288 instances
+[INFO DPL-0021] HPWL before           19950.4 u
+[INFO DPL-0022] HPWL after            19550.4 u
+[INFO DPL-0023] HPWL delta               -2.0 %
