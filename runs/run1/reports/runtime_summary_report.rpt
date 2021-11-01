@@ -1,0 +1,15 @@
+0-prep 0h0m9s301ms
+1-yosys 0h0m7s832ms
+2-opensta 0h0m6s518ms
+3-verilog2def_openroad 0h0m3s513ms
+4-ioPlacer 0h0m3s986ms
+5-tapcell 0h0m4s112ms
+7-pdn 0h0m4s555ms
+8-replace 0h0m7s178ms
+8-resizer 0h0m4s741ms
+9-write_verilog 0h0m2s606ms
+10-opensta_post_resizer 0h0m5s549ms
+11-opendp 0h0m2s682ms
+13-write_verilog 0h0m2s733ms
+14-cts 0h4m44s879ms
+15-write_verilog 0h0m2s882ms
